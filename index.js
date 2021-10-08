@@ -1,13 +1,17 @@
 function wordDef(){
     let word = document.getElementById('wordInput').value;
-
+    // Error handling to be done here
+    
     getWordDef(word);
 }
 
 function getWordDef(word){
+    // AJAX request for getting word meaning
     const xhr = new XMLHttpRequest();
 
     xhr.onload = function(){
+        // Error handling to be done here
+        
         let wordMeanings = JSON.parse(this.responseText);
         wordDefFilter(wordMeanings);
     }
@@ -17,8 +21,9 @@ function getWordDef(word){
 }
 
 function wordDefFilter(wordDef){
-
-    showWordDef(defs);
+    // Getting word meaning and examples logic to be written here
+    
+    showWordDef(wordDef);
 }
 
 function showWordDef(defs){
