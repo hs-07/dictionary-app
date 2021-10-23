@@ -11,7 +11,9 @@ function getWordDef(word){
 
     xhr.onload = function(){
         // Error handling to be done here
-        
+        if(status === 404){
+            alert("Enter the correct word");
+        }
         let wordMeanings = JSON.parse(this.responseText);
         wordDefFilter(wordMeanings);
     }
