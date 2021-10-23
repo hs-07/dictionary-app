@@ -1,6 +1,10 @@
 function wordDef(){
     let word = document.getElementById('wordInput').value;
     // Error handling to be done here
+    if(word.length == 0)
+    {
+        alert("Enter all enteries");
+    }
     
     getWordDef(word);
 }
